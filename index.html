@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Adeeyo Oluwagbenga Timilehin">
+  <meta name="description" content="Explore my diverse portfolio showcasing innovative web solutions, seamless user experiences, and cutting-edge design. From responsive websites to dynamic applications, discover how I bring visions to life."/>
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/bootstrap/css/bootstrap.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fontawesome/css/all.css') ?>">
+  <link rel="stylesheet" type="text/css" href="<?= base_url('assets/bootstrap/css/style.css') ?>">
+  <link rel="icon" type="image/x-icon" href="<?= base_url('assets/images/Logo.png') ?>">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title>Home - Portfolio</title>
+	<script>
+	    $(document).ready(function(){
+	        $("#myModal").modal('show');
+	    });
+	</script>
+  <style type="text/css">
+    .whole-page{
+      background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+      overflow-x: hidden;
+    }
+    p{
+      font-family: "Montserrat";
+    }
+    h1, h2, h3, h4, h5{
+      font-family: times new roman;
+    }
+    h1.name{
+      font-family: "georgia";
+    }
+    .bg-banner{
+      background-image: url(<?= base_url('assets/images/12188678_4907157.jpg') ?>);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .transparent{
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    .text-container{
+      background-color: rgba(0,128,128, 0.8);
+      color: white;
+      box-shadow: 8px -8px 7px grey;
+    }
+    .social-links i{
+      color: #000;
+    }
+    .link-1{
+      background-color: rgb(255, 165, 0);
+      color: white;
+    }
+    .link-2{
+      background-color: transparent;
+      color: white;
+    }
+    .link-1:hover, .link-2:hover{
+      background-color: rgba(255, 165, 0, 0.4);
+      color: white;
+    }
+    .text-design{
+      width: 60px;
+      height: 5px;
+      background-color: rgb(255, 165, 0);
+      margin: -1% 0% 20px 0%;
+    }
+    .border-custom{
+      border-right: 2px solid #008080;
+    }
+    .my-width-1{
+      width: 30%;
+    }
+    .my-width-2{
+      width: 70%;
+    }
+    @media only screen and (max-width: 960px){
+      .border-custom{
+        border-bottom: 2px solid #008080;
+        border-right: 20px
+      }
+    }
+
+    @media only screen and (min-width: 750px){
+      .my-width-1{
+        width: 20%;
+      }
+      .my-width-2{
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="bg-dark modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: #008080; color: #fff">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body position-relative">
+        <div class="dyk-container text-center">
+          <i class="fa fa-lightbulb fs-3"></i>
+          <div class="line"></div>
+          <h1 class="text-center mt-4 fw-bolder">DID YOU KNOW?</h1>
+          <?php foreach($enlight as $enlightment) : ?>
+            <p class="mb-4"><?= $enlightment['questions'] ?></p>
+          <?php endforeach ?>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn close" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="whole-page">
+  <nav class="navbar navbar-expand-lg navbar-light" style="z-index: 1000; background-color: rgba(0, 0, 0, 0.2);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="<?= base_url('assets/images/Logo.png') ?>" width="100px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="n<avbarNav">
+        <ul class="navbar-nav ms-auto social-links">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/ogeetimi/"><i class="fab fa-instagram fs-5"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://wa.link/njux24"><i class="fab fa-whatsapp fs-5"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/oluwagbenga-adeeyo/"><i class="fab fa-linkedin fs-5"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tel:+2348120887673"><i class="fa fa-phone fs-5"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- for desktop view -->
+  <div class="bg-banner d-none d-lg-block d-xl-block d-xxl-block">
+    <div class="transparent">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 p-5 position-relative">
+            <div class="position-absolute bottom-0 start-0 pt-5 pb-5 pe-5 ps-4 text-container">
+              <h6 class="fw-light typewrite" style="letter-spacing: 7px;" data-period="2000" data-type='["web developer", "UI/UX designer", "database administrator"]'></h6>
+              <h1 style="font-size: 60px;" class="name">Adeeyo<br>Oluwagbenga .T</h1>
+              <p>Passionate web developer with a keen eye for design and a knack for crafting seamless user experiences. Proficient in front-end and back-end technologies, I specialize in creating responsive, dynamic websites that elevate brands and engage audiences. From concept to deployment, I bring creativity, precision, and innovation to every project, ensuring client satisfaction and delivering results that exceed expectations.</p>
+              <!-- <a class="me-3 text-white text-decoration-none" href="#"><i class="fab fa-instagram fs-5"></i></a>
+              <a class="me-3 text-white text-decoration-none"  href="#"><i class="fab fa-whatsapp fs-5"></i></a>
+              <a class="me-3 text-white text-decoration-none"  href="#"><i class="fab fa-linkedin fs-5"></i></a> -->
+              <div class="mb-3">
+                <a class="text-decoration-none text-white me-4" href="https://www.instagram.com/ogeetimi/"><i class="fab fa-instagram fs-5"></i></a>
+                <a class="text-decoration-none text-white me-4" href="https://wa.link/njux24"><i class="fab fa-whatsapp fs-5"></i></a>
+                <a class="text-decoration-none text-white me-4" href="https://www.linkedin.com/in/oluwagbenga-adeeyo/"><i class="fab fa-linkedin fs-5"></i></a>
+                <a class="text-decoration-none text-white me-4" href="tel:+2348120887673"><i class="fa fa-phone fs-5"></i></a>
+              </div>
+              <a href="#aboutme" class="btn btn-lg link-1">About me</a>
+              <a href="#myworks" class="btn btn-lg link-2">My works&nbsp;&nbsp;<i class="fa fa-angle-right" style="font-size: 10px; vertical-align: middle;"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6" style="padding: 0; margin: 0;">
+            <img src="<?= base_url('assets/images/profile_1.png') ?>" width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- for mobile view -->
+  <div class="bg-banner d-lg-none d-xl-none d-xxl-none">
+    <div class="transparent pt-4">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="pt-5 pb-5 ps-3 pe-3 text-container mb-4">
+              <h6 class="fw-light typewrite" style="letter-spacing: 7px;" data-period="2000" data-type='["web developer", "UI/UX designer", "database administrator"]'></h6>
+              <h1 style="font-size: 40px;" class="name">Adeeyo Oluwagbenga .T</h1>
+              <p>Passionate web developer with a keen eye for design and a knack for crafting seamless user experiences. Proficient in front-end and back-end technologies, I specialize in creating responsive, dynamic websites that elevate brands and engage audiences. From concept to deployment, I bring creativity, precision, and innovation to every project, ensuring client satisfaction and delivering results that exceed expectations.</p>
+              <div class="mb-3">
+                <a class="text-decoration-none text-white me-4" href="https://www.instagram.com/ogeetimi/"><i class="fab fa-instagram fs-5"></i></a>
+                <a class="text-decoration-none text-white me-4" href="https://wa.link/njux24"><i class="fab fa-whatsapp fs-5"></i></a>
+                <a class="text-decoration-none text-white me-4" href="https://www.linkedin.com/in/oluwagbenga-adeeyo/"><i class="fab fa-linkedin fs-5"></i></a>
+                <a class="text-decoration-none text-white me-4" href="tel:+2348120887673"><i class="fa fa-phone fs-5"></i></a>
+              </div>
+              <a href="#aboutme" class="btn btn-md link-1">About me</a>
+              <a href="#myworks" class="btn btn-md link-2">My works&nbsp;&nbsp;<i class="fa fa-angle-right" style="font-size: 10px; vertical-align: middle;"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-6" style="padding: 0; margin: 0;">
+            <img src="<?= base_url('assets/images/profile_3.png') ?>" width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pt-5 pb-5">
+    <h1 class="mb-3">Why choose me?</h1>
+    <div class="text-design"></div>
+    <ol style="--length: 5" role="list" class="pt-2">
+      <div class="row listings">
+        <div class="col-md-6 mb-3">
+          <li style="--i: 1" class="onhovereffect">
+            <h3>Creative Solutions</h3>
+            <p>I thrive on turning ideas into visually stunning and functional websites. Whether it's a sleek portfolio, an intuitive e-commerce platform, or a dynamic web application, I love bringing concepts to life.</p>
+          </li>
+        </div>
+        <div class="col-md-6 mb-3">
+          <li style="--i: 2" class="onhovereffect">
+            <h3>Collaborative Approach</h3>
+            <p>I believe in open communication and collaboration every step of the way. By closely working with my clients, I ensure that their vision is realized and their goals are met with precision.</p>
+          </li>
+        </div>
+        <div class="col-md-6 mb-3">
+          <li style="--i: 3" class="onhovereffect">
+            <h3>User-Centric Design</h3>
+            <p>I prioritize user experience above all else. My designs are not just visually appealing; they're intuitive, accessible, and optimized for seamless navigation across devices.</p>
+          </li>
+        </div>
+        <div class="col-md-6 mb-3">
+          <li style="--i: 5" class="onhovereffect">
+            <h3>Technical Expertise</h3>
+            <p>Proficient in a range of programming languages and frameworks, including PHP and CodeIgniter 4, I have the technical prowess to tackle complex challenges and deliver robust, scalable solutions.</p>
+          </li>
+        </div>
+      </div>
+    </ol>
+  </div>
+
+  <div class="pt-5 pb-3 white-bg">
+    <div class="container">
+      <h1 class="mb-3" id="aboutme">About me</h1>
+      <div class="text-design"></div>
+      <div class="row mt-4 mb-4">
+        <div class="col-lg-4 mb-4 order-lg-last order-xl-last order-xxl-last border-custom">
+          <table class="table border-dark table-hover">
+            <tr>
+              <td>
+                <div class="shapes ps-2">Birthday</div>
+              </td>
+              <td class="text-end">February 13</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="shapes ps-2">Residence</div>
+              </td>
+              <td class="text-end">Nigeria</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="shapes ps-2">Freelance</div>
+              </td>
+              <td class="text-end">Available</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="shapes ps-2">Address</div>
+              </td>
+              <td class="text-end">Lagos, Nigeria</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-lg-4 mb-4 border-custom">
+          <p>Beyond the code, I'm fueled by a love for problem-solving and a desire to make a positive impact through technology. When I'm not immersed in lines of code, you'll often find me exploring new programming languages, contributing to open-source projects, or tinkering with personal side projects to continuously expand my skill set.</p>
+          <p>Ready to elevate your online presence? Whether you're a startup looking to establish your brand or an established business seeking a digital makeover, I'm here to help. Let's collaborate on your next project and turn your ideas into reality!</p>
+        </div>
+        <div class="col-lg-4 mb-4 order-lg-first order-xl-first order-xxl-first">
+          <div class="single-box">
+            <span></span>
+            <img src="<?= base_url('assets/images/pic.jpeg') ?>" width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- for desktop view -->
+  <div class="container-fluid ps-3 pe-3 pt-5 pb-5 d-none d-lg-block d-xl-block d-xxl-block">
+    <h1 class="mb-3">Skills</h1>
+    <div class="text-design"></div>
+    <div class="row" style="padding-top: 6%;">
+      <div class="col-md-3">
+        <div class="position-relative c-border text-center h-100" style="padding: 30% 4% 4% 4%;">
+          <img src="<?= base_url('assets/images/d_pic_4.png') ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 130px;">
+          <h5 class="fw-bolder">HTML, CSS & JS</h5>
+          <p>I utilize HTML for structuring the content, CSS for styling and layout, and JavaScript for interactivity and dynamic functionality. By seamlessly integrating these languages, I craft engaging web applications that deliver a smooth and intuitive user experience.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="position-relative c-border text-center h-100" style="padding: 30% 4% 4% 4%;">
+          <img src="<?= base_url('assets/images/d_pic_3.png') ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 130px;">
+          <h5 class="fw-bolder">DBMS</h5>
+          <p>I integrate MySQL databases seamlessly into web applications, ensuring efficient data storage, retrieval, and management. By leveraging MySQL's relational database management system, I design robust schemas and execute optimized queries to support the application's functionality while maintaining data integrity and security.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="position-relative c-border text-center h-100" style="padding: 30% 4% 4% 4%;">
+          <img src="<?= base_url('assets/images/d_pic_2.png') ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 130px;">
+          <h5 class="fw-bolder">UI/UX Design</h5>
+          <p>I apply UI/UX principles to craft user-centric web applications that prioritize intuitive navigation, sleek design, and seamless interactions. By conducting thorough user research, wireframing, and prototyping, I ensure that every aspect of the application is optimized for usability and delivers a delightful user experience.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="position-relative c-border text-center h-100" style="padding: 30% 4% 4% 4%;">
+          <img src="<?= base_url('assets/images/d_pic_1.png') ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 130px;">
+          <h5 class="fw-bolder">PHP & Framework</h5>
+          <p>With PHP as the backbone and CodeIgniter framework as my toolkit, I construct robust web applications with efficiency and scalability in mind. Leveraging CodeIgniter's MVC architecture and built-in libraries, I streamline development processes and deliver powerful, customized solutions tailored to client needs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- for mobile view -->
+  <div class="container-fluid pt-5 pb-5 d-lg-none d-xl-none d-xxl-none mt-5 mb-5" style="overflow-x: hidden;">
+    <h1 class="mb-3">Skills</h1>
+    <div class="text-design"></div>
+    <div class="c-border position-relative mb-5">
+      <img src="<?= base_url('assets/images/m_pic_1.png') ?>" style="width: 200px; left: 95%;" class="position-absolute top-50 translate-middle">
+      <div class="p-3" style="width: 72%;">
+        <h5 class="fw-bolder">DBMS</h5>
+        <p>I integrate MySQL databases seamlessly into web applications, ensuring efficient data...<a class="modal-links" data-bs-toggle="modal" data-bs-target="#dbmsModal">read more</a></p>
+      </div>
+    </div>
+    <div class="c-border position-relative mb-5">
+      <img src="<?= base_url('assets/images/m_pic_4.png') ?>" style="width: 200px; left: 5%;" class="position-absolute top-50 translate-middle">
+      <div class="row">
+        <div class="my-width-1"></div>
+        <div class="p-3 my-width-2">
+          <h5 class="fw-bolder">HTML, CSS & JS</h5>
+          <p>I utilize HTML for structuring the content, CSS for styling and layout, and JavaScript...<a class="modal-links" data-bs-toggle="modal" data-bs-target="#htmlModal">read more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="c-border position-relative mb-5">
+      <img src="<?= base_url('assets/images/m_pic_2.png') ?>" style="width: 200px; left: 95%;" class="position-absolute top-50 translate-middle">
+      <div class="p-3" style="width: 72%;">
+        <h5 class="fw-bolder">UI/UX Design</h5>
+        <p>I apply UI/UX principles to craft user-centric web applications that prioritize intuitive...<a class="modal-links" data-bs-toggle="modal" data-bs-target="#uiuxModal">read more</a></p>
+      </div>
+    </div>
+    <div class="c-border position-relative mb-5">
+      <img src="<?= base_url('assets/images/m_pic_3.png') ?>" style="width: 200px; left: 5%;" class="position-absolute top-50 translate-middle">
+      <div class="row">
+        <div class="my-width-1"></div>
+        <div class="p-3 my-width-2">
+          <h5 class="fw-bolder">PHP & Framework</h5>
+          <p>With PHP as the backbone and CodeIgniter framework as my toolkit, I construct robust...<a class="modal-links" data-bs-toggle="modal" data-bs-target="#phpModal">read more</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="dbmsModal" tabindex="-1" aria-labelledby="dbmsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dbmsModalLabel">DBMS
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>I integrate MySQL databases seamlessly into web applications, ensuring efficient data storage, retrieval, and management. By leveraging MySQL's relational database management system, I design robust schemas and execute optimized queries to support the application's functionality while maintaining data integrity and security.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="phpModal" tabindex="-1" aria-labelledby="phpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="phpModalLabel">PHP & Framework
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>With PHP as the backbone and CodeIgniter framework as my toolkit, I construct robust web applications with efficiency and scalability in mind. Leveraging CodeIgniter's MVC architecture and built-in libraries, I streamline development processes and deliver powerful, customized solutions tailored to client needs.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="uiuxModal" tabindex="-1" aria-labelledby="uiuxModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="uiuxModalLabel">UI/UX Design
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>I apply UI/UX principles to craft user-centric web applications that prioritize intuitive navigation, sleek design, and seamless interactions. By conducting thorough user research, wireframing, and prototyping, I ensure that every aspect of the application is optimized for usability and delivers a delightful user experience.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="htmlModal" tabindex="-1" aria-labelledby="htmlModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="htmlModalLabel">HTML, CSS & JS
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>I utilize HTML for structuring the content, CSS for styling and layout, and JavaScript for interactivity and dynamic functionality. By seamlessly integrating these languages, I craft engaging web applications that deliver a smooth and intuitive user experience.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white mt-3">
+    <div class="container-fluid ps-3 pe-3 pt-5 pb-5">
+      <h1 class="mb-3" id="myworks">Works</h1>
+      <div class="text-design"></div>
+      <div class="row d-flex">
+        <div class="col-md-4 mb-4">
+          <a href="https://oteeconcepts.com/" class="text-dark text-decoration-none" target="_blank">
+            <div class="card">
+              <div class="single-box">
+                <span></span>
+                <img src="<?= base_url('assets/images/work-pic-1.png') ?>" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-8">
+                    <h4 class="card-title fw-bolder">oteeconcepts</h4>
+                  </div>
+                  <div class="col-4 text-end">
+                    <i class="fa fa-arrow-right fw-bolder"></i>
+                  </div>
+                </div>
+                <h6 class="mb-4"><img src="<?= base_url('assets/images/flag.svg') ?>" style="width: 20px; margin-right: 2%;">Lagos - Nigeria</h6>
+                <p class="card-text" style="font-size: 12px">Designed by: Adeeyo O.T&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Developed by: Adeeyo O.T</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="https://peeps.oteeconcepts.com/" class="text-dark text-decoration-none" target="_blank">
+            <div class="card">
+              <div class="single-box">
+                <span></span>
+                <img src="<?= base_url('assets/images/work-pic-2.png') ?>" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-8">
+                    <h4 class="card-title fw-bolder">peeps</h4>
+                  </div>
+                  <div class="col-4 text-end">
+                    <i class="fa fa-arrow-right fw-bolder"></i>
+                  </div>
+                </div>
+                <h6 class="mb-4"><img src="<?= base_url('assets/images/flag.svg') ?>" style="width: 20px; margin-right: 2%;">Lagos - Nigeria</h6>
+                <p class="card-text" style="font-size: 12px">Designed by: Adeeyo O.T&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Developed by: Adeeyo O.T</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="#" class="text-dark text-decoration-none">
+            <div class="card">
+              <div class="single-box">
+                <span></span>
+                <img src="<?= base_url('assets/images/work-pic-3.png') ?>" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-8">
+                    <h4 class="card-title fw-bolder">portfolio</h4>
+                  </div>
+                  <div class="col-4 text-end">
+                    <i class="fa fa-arrow-right fw-bolder"></i>
+                  </div>
+                </div>
+                <h6 class="mb-4"><img src="<?= base_url('assets/images/flag.svg') ?>" style="width: 20px; margin-right: 2%;">Lagos - Nigeria</h6>
+                <p class="card-text" style="font-size: 12px">Designed by: Adeeyo O.T&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Developed by: Adeeyo O.T</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="https://mypdfhub.oteeconcepts.com/" class="text-dark text-decoration-none" target="_blank">
+            <div class="card">
+              <div class="single-box">
+                <span></span>
+                <img src="<?= base_url('assets/images/work-pic-4.png') ?>" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-8">
+                    <h4 class="card-title fw-bolder">PDF hub</h4>
+                  </div>
+                  <div class="col-4 text-end">
+                    <i class="fa fa-arrow-right fw-bolder"></i>
+                  </div>
+                </div>
+                <h6 class="mb-4"><img src="<?= base_url('assets/images/flag.svg') ?>" style="width: 20px; margin-right: 2%;">Lagos - Nigeria</h6>
+                <p class="card-text" style="font-size: 12px">Designed by: Adeeyo O.T&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Developed by: Adeeyo O.T</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-3">
+    <img src="<?= base_url('assets/images/Logo.png') ?>" width="100px" class="me-2">
+    <a href="tel:+2348120887673" class="text-decoration-none" style="color: #008080"><i class="fa fa-phone p-2" style="background-color: #008080; color: white; border-radius: 100px;"></i> contact me</a>
+  </div>
+</div>
+<div class="bg-white ps-3 pe-3">
+  <p style="font-size: 12px; padding: 0px; margin: 0px">PORTFOLIO © <?= date('Y') ?></p>
+</div>
+<script src="<?= base_url('assets/bootstrap/js/bootstrap.js') ?>"></script>
+<script src="<?= base_url('assets/bootstrap/js/style.js') ?>"></script>
+</body>
+</html>
