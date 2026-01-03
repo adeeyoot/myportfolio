@@ -32,7 +32,7 @@ ol {
 	top: 0;
 	left: 0;
 /*	background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));*/
-background-color: rgb(0,128,128);
+background-color: #000;
 }
 
 .onhovereffect{
@@ -61,7 +61,7 @@ background-color: rgb(0,128,128);
 	content: counter(list);
 	padding: 1rem;
 	border-radius: 50%;
-	background-color: rgb(255, 165, 0);
+	background-color: rgb(48, 63, 96);
 /*	background-color: var(--c1);*/
 	color: white;
 }
